@@ -14,15 +14,17 @@ class LocationButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Wrap(
+      alignment: WrapAlignment.center,
+      spacing: 8.0,
+      runSpacing: 8.0,
       children: [
         LocationButton(
-            callbackFunction: setLocation, description: "Set Location"),
+            callbackFunction: setLocation, description: "Search", icon: Icons.search),
         LocationButton(
-            callbackFunction: setLocationFromGps, description: "GPS"),
+            callbackFunction: setLocationFromGps, description: "Use GPS", icon: Icons.my_location),
         LocationButton(
-            callbackFunction: clearLocation, description: "Clear Location"),
+            callbackFunction: clearLocation, description: "Clear", icon: Icons.clear),
       ],
     );
   }

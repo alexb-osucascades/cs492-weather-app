@@ -5,17 +5,24 @@ class LocationButton extends StatelessWidget {
     super.key,
     required this.description,
     required this.callbackFunction,
+    required this.icon,
   });
 
   final String description;
   final void Function() callbackFunction;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child:
-          ElevatedButton(onPressed: callbackFunction, child: Text(description)),
+    return FilledButton.icon(
+      onPressed: callbackFunction, 
+      icon: Icon(icon, size: 18),
+      label: Text(description),
+      style: FilledButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8)
+        )
+      ),
     );
   }
 }
