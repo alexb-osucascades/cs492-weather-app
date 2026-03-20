@@ -30,3 +30,25 @@ Once Flutter is installed and ready, clone this repository to your local machine
 git clone [https://github.com/alexb-osucascades/cs492-weather-app.git](https://github.com/alexb-osucascades/cs492-weather-app.git)
 cd cs492-weather-app
 ```
+
+### 3. Install Dependencies
+Navigate into the project directory and fetch the required Dart packages:
+
+```bash
+flutter pub get
+```
+
+### 4. Environment Variables (.env)
+This application relies on external APIs that require keys. In the root of your project directory, create a .env file and add your API keys. (Note: You will need to generate a free API key from Pexels).
+
+
+```
+PEXELS_API_KEY=your_api_key_here
+```
+
+### 5. Run the Application
+Make sure you have a device connected or an emulator running. In VS Code, you can select your device in the bottom right corner. Then, launch the app:
+
+```bash
+flutter run
+```
